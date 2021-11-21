@@ -33,14 +33,76 @@
 
         </TextView>
 
+        <TextView
+            android:id="@+id/albumname"
+            android:layout_margin="5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:layout_width="150sp"
+            android:layout_height="20sp"
+            android:text="Album name"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/artistName"
+            android:layout_marginBottom="4dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/artistname"
+            android:layout_margin="5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:layout_width="150sp"
+            android:layout_height="20sp"
+            android:text="Artist name"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/albumName">
+
+        </TextView>
+
         <ImageView
             android:id="@+id/imageview"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:src="@drawable/music">
 
         </ImageView>
+
+        <TextView
+            android:id="@+id/genreName"
+            android:layout_margin="5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:layout_width="150sp"
+            android:layout_height="20sp"
+            android:text="Genre name"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_margin="5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Year"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/genrename"
+            android:layout_width="150sp"
+            android:layout_height="20sp">
+
+        </TextView>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -114,13 +176,14 @@
                 android:layout_height="50dp">
 
             </Button>
+
             <Button
                 android:id="@+id/previousbtn"
-                android:layout_toLeftOf="@+id/playbtn"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/ic_previous"
                 android:layout_width="50dp"
-                android:layout_height="50dp">
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/playbtn"
+                android:background="@drawable/ic_previous">
 
             </Button>
             <Button
@@ -133,28 +196,28 @@
                 android:layout_height="40dp">
 
             </Button>
+
             <Button
                 android:id="@+id/frewindbtn"
-                android:layout_toLeftOf="@+id/previousbtn"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_fast_rewind"
                 android:layout_width="40dp"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/previousbtn"
+                android:background="@drawable/ic_fast_rewind">
 
             </Button>
 
-            <com.gauravk.audiovisualizer.visualizer.BarVisualizer
-                xmlns:custom="http://schemas.android.com/apk/res-auto"
+            <com.gauravk.audiovisualizer.visualizer.BarVisualizer xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/blast"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_alignParentBottom="true"
-                custom:avDensity="0.5"
-                custom:avType="outline"
-                custom:avWidth="4dp"
                 custom:avColor="#FF362E"
-                custom:avSpeed="normal"/>
+                custom:avDensity="0.5"
+                custom:avSpeed="normal"
+                custom:avType="outline"
+                custom:avWidth="4dp" />
 
         </RelativeLayout>
 
